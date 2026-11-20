@@ -32,4 +32,4 @@ for (const [group, height, top, bottom] of [['rosas', 800, 155, 477], ['tulipane
 for (const key of ['rosas1','rosas4','rosas6','tulipanes2','tulipanes4','tulipanes6','girasoles1','girasoles3','girasoles6']) images[key] = { src: '/media/' + key + '-hd.webp', size: [1122,1402], crop: [0,0,1122,1402] }
 export const imageFor = key => images[key]?.src ?? '/media/pendiente.svg'
 export const valuesOf = rows => Object.fromEntries(rows.map(row => [row.clave, row.valor]))
-export const demoMode = true
+export const demoMode = false

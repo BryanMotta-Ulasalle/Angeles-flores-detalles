@@ -54,14 +54,14 @@ test('productos enlazados a categorías e imágenes, sin precios o stock comerci
     await access(new URL('../public' + asset.src, import.meta.url))
   }
 })
-test('la consulta conserva cantidades y dedicatoria, usa Bryan y no envía automáticamente', () => {
-  assert.equal(demoMode, true)
+test('la consulta conserva cantidades y dedicatoria y se dirige a Ángeles', () => {
+  assert.equal(demoMode, false)
   const business = valuesOf(backup.negocio)
   assert.notEqual(testWhatsApp, business.whatsapp)
   const items = resolveItems({ 'box-rosas-1': 2 }, backup.productos)
   const message = orderMessage(business, items, { modalidad: 'Delivery', fecha: '2026-12-01', dedicatoria: 'Para ti & para mí 🌹', notas: '' })
-  const url = new URL(whatsappLink(testWhatsApp, message))
-  assert.equal(url.pathname, '/51964527152')
+  const url = new URL(whatsappLink(demoMode ? testWhatsApp : business.whatsapp, message))
+  assert.equal(url.pathname, '/51951263140')
   assert.equal(url.searchParams.get('text'), message)
   assert.ok(message.includes('2 × Box de Rosas #1 · por cotizar'))
   assert.ok(message.includes('Para ti & para mí 🌹'))

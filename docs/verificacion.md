@@ -21,3 +21,7 @@ Se reemplazó el logo del navbar por una reconstrucción PNG transparente de 177
 ## Conexión a Google Sheets, 20/11/2026
 
 Se validaron los seis CSV públicos enviados por Bryan y se conectaron por sus cabeceras y claves. Filas: negocio 8, portada 8, categorias 3, productos 9, informacion 4, preguntas 3. Los nueve productos tienen disponible=NO y consultar_precio=SI en la fuente. Se conserva la hoja sin alterar sus datos. Verificación en navegador: nueve productos, nueve botones deshabilitados y ningún aviso de contenido de respaldo tras cargar. Caché y validación por sección comprobadas con seis pruebas automatizadas. WhatsApp sigue en modo de prueba. Captura en outputs/angeles-conexion/catalogo-conectado.jpg.
+
+## WhatsApp del cliente, 20/11/2026
+
+Activado por instrucción de Bryan: demoMode=false. La fuente negocio publica 51951263140 y coincide con el número de respaldo. Se retiraron la marca PRUEBA del mensaje y los textos que dirigían a Bryan. Verificado en navegador con Box de Rosas #1 a S/40, cantidad y subtotal: enlace wa.me/51951263140, mensaje sin prefijo de prueba. No se abrió WhatsApp ni se envió ningún mensaje. Compilación y seis pruebas aprobadas.

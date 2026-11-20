@@ -13,8 +13,8 @@ Para Netlify: comando `npm run build`, carpeta de publicación `dist`, Node 22. 
 - Nueve arreglos transcritos del catálogo publicado; precios y disponibilidad actual pendientes de confirmación.
 - `src/data.js`: contenido de respaldo, productos y encuadres de fotografías.
 - `src/config.js`: seis fuentes CSV conectadas a la hoja propia de Ángeles el 20/11/2026. Revalidación cada 10 minutos con la página visible; Google puede añadir demora de publicación.
-- `demoMode = true`: el mensaje se identifica como prueba y abre WhatsApp de Bryan (964527152). No se envía automáticamente. El número publicado de Ángeles se conserva como referencia del negocio (951263140).
-- Antes de activar comercialmente: confirmar teléfono, precios, catálogo, stock, horario, cobertura, costos y condiciones. Cambiar `demoMode` a `false` solo al autorizar el negocio la recepción de pedidos.
+- `demoMode = false`: las consultas abren WhatsApp de Ángeles (+51 951 263 140), usando el campo whatsapp de negocio. El visitante revisa y envía el mensaje desde WhatsApp.
+- Antes de activar comercialmente: confirmar teléfono, precios, catálogo, stock, horario, cobertura, costos y condiciones. El destino al cliente fue activado por instrucción de Bryan para la presentación.
 - El sitio usa `noindex,nofollow` y publicación privada para esta presentación. Revisar SEO y dominio cuando se autorice el lanzamiento público.
 
 ## Pendientes para la reunión

@@ -251,7 +251,7 @@ export default function App() {
       <div className="announcement-bar">
         <span>Flores para tus momentos especiales.</span>
         <span className="demo-label">
-          Propuesta de diseño · Vista de prueba
+          Propuesta de diseño · Consultas a Ángeles
         </span>
       </div>
       <header className="header" id="inicio">
@@ -580,7 +580,7 @@ export default function App() {
                 {info.horario}
               </p>
               <button className="text-link" onClick={openOrder}>
-                Prepara una consulta de prueba
+                Prepara tu consulta
               </button>
             </div>
             <div className="faq-list">
@@ -693,8 +693,7 @@ export default function App() {
       <div className="demo-ribbon">
         <span>PROPUESTA</span>
         <p>
-          Avance para la reunión. Las consultas se dirigen al número de prueba
-          de Bryan.
+          Avance para la reunión. Las consultas se dirigen al WhatsApp de Ángeles.
         </p>
       </div>
       {count > 0 && (
