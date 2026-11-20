@@ -1,6 +1,6 @@
 # Ángeles · Flores & Detalles
 
-Propuesta privada para presentar en una reunión. Dirección visual aprobada: «Romance natural». React, Vite, CSS y fotografías del catálogo público del negocio.
+Propuesta privada para presentar en una reunión. Dirección visual aprobada: «Romance natural». React, Vite y CSS. Fotografías referenciales recreadas con IA a partir del catálogo público del negocio.
 
 ## Ejecutar y verificar
 

@@ -11,7 +11,7 @@ Revisión: 19 de noviembre de 2026. No se contactó al negocio ni se enviaron me
 
 ## Recursos
 
-`public/media/catalogo-rosas.jpg`, `catalogo-tulipanes.jpg`, `catalogo-girasoles.jpg`, `catalogo-detalles.jpg`: láminas originales de Maps. `angeles-logo.jpg`: perfil público de Instagram coincidente. Las fotografías se encuadran mediante CSS (coordenadas en `src/data.js`); no se generaron fotografías de productos. Pedir archivos originales de alta resolución y autorización para la versión comercial.
+`public/media/catalogo-rosas.jpg`, `catalogo-tulipanes.jpg`, `catalogo-girasoles.jpg`, `catalogo-detalles.jpg`: láminas originales de Maps. `angeles-logo.jpg`: perfil público de Instagram coincidente. Las fotografías se encuadran mediante CSS (coordenadas en `src/data.js`); en la primera versión no se generaron fotografías de productos. En la revisión posterior se sustituyeron por recreaciones con IA documentadas en imagenes-ia.md. Pedir archivos originales de alta resolución y autorización para la versión comercial.
 
 ## Datos pendientes
 

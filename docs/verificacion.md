@@ -13,3 +13,7 @@
 - Hoja de administración propia pendiente de configurar; fuentes CSV vacías. Imágenes de catálogo de resolución reducida: solicitar originales para el lanzamiento.
 
 Esta revisión no sustituye la confirmación comercial de productos, precios, disponibilidad, horario y entregas por parte del negocio.
+
+## Revisión de imágenes y logo
+
+Se reemplazó el logo del navbar por una reconstrucción PNG transparente de 1774 × 887, sin texto HTML duplicado. Se verificó el canal alfa. Las nueve imágenes activas son referencias recreadas con IA a 1122 × 1402, servidas como WebP de 111–256 KB aproximadamente. Se revisaron visualmente las nueve imágenes, la portada y el catálogo a 1440 y 390 píxeles. Sin imágenes fallidas ni desbordamiento observado. Se verificó también la miniatura de la consulta. Capturas: escritorio-hd.jpg, movil-hd.jpg, catalogo-escritorio-hd.jpg y catalogo-movil-hd.jpg en outputs/angeles-avance.
