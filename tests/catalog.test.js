@@ -13,12 +13,32 @@ test('las seis secciones cumplen el contrato del catálogo y se pueden importar 
     assert.deepEqual(parseSection(section, csv), validateSection(section, rows))
   }
 })
-test('la propuesta independiente no carga las hojas de otra florería', async () => {
-  assert.equal(Object.values(sources).every(url => !url), true)
+test('las seis secciones cargan y almacenan únicamente la hoja propia de Ángeles', async () => {
+  const cache = new Map()
   for (const section of Object.keys(backup)) {
-    const result = await loadSection(section, { fetcher: () => { throw Error('No debe consultar la red') } })
-    assert.equal(result.rows, backup[section])
+    const url = new URL(sources[section])
+    assert.equal(url.hostname, 'docs.google.com')
+    assert.ok(url.pathname.includes('2PACX-1vSLG5GQ5R348n5TBM0p_yrBP8vWpOw-WCc0IvjgR5r6K9WCnindnbMr0-hm0Kly1RxaLH9nYoqzB1la'))
+    const quote = value => '"' + String(value).replaceAll('"', '""') + '"'
+    const headers = Object.keys(backup[section][0])
+    const csv = [headers.join(','), ...backup[section].map(row => headers.map(key => quote(row[key])).join(','))].join('\n')
+    const storage = () => ({ getItem: key => cache.get(key), setItem: (key, value) => cache.set(key, value) })
+    const result = await loadSection(section, { storage, fetcher: async actualUrl => {
+      assert.equal(actualUrl, sources[section])
+      return { ok: true, text: async () => csv }
+    } })
+    assert.equal(result.source, 'sheets')
+    assert.equal(result.stale, false)
+    assert.deepEqual(result.rows, validateSection(section, backup[section]))
+    const cached = await loadSection(section, { storage, fetcher: () => { throw Error('No debe consultar otra vez una caché vigente') } })
+    assert.equal(cached.source, 'cache')
   }
+})
+test('un CSV inválido no reemplaza la sección de respaldo', async () => {
+  const result = await loadSection('productos', { storage: () => ({ getItem: () => null }), fetcher: async () => ({ ok: true, text: async () => '<html>Acceso denegado</html>' }) })
+  assert.equal(result.source, 'backup')
+  assert.equal(result.stale, true)
+  assert.equal(result.rows, backup.productos)
 })
 test('productos enlazados a categorías e imágenes, sin precios o stock comercial inventados', async () => {
   const categories = new Set(backup.categorias.map(row => row.id))

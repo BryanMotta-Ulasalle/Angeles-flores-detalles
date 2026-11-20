@@ -17,3 +17,7 @@ Esta revisión no sustituye la confirmación comercial de productos, precios, di
 ## Revisión de imágenes y logo
 
 Se reemplazó el logo del navbar por una reconstrucción PNG transparente de 1774 × 887, sin texto HTML duplicado. Se verificó el canal alfa. Las nueve imágenes activas son referencias recreadas con IA a 1122 × 1402, servidas como WebP de 111–256 KB aproximadamente. Se revisaron visualmente las nueve imágenes, la portada y el catálogo a 1440 y 390 píxeles. Sin imágenes fallidas ni desbordamiento observado. Se verificó también la miniatura de la consulta. Capturas: escritorio-hd.jpg, movil-hd.jpg, catalogo-escritorio-hd.jpg y catalogo-movil-hd.jpg en outputs/angeles-avance.
+
+## Conexión a Google Sheets, 20/11/2026
+
+Se validaron los seis CSV públicos enviados por Bryan y se conectaron por sus cabeceras y claves. Filas: negocio 8, portada 8, categorias 3, productos 9, informacion 4, preguntas 3. Los nueve productos tienen disponible=NO y consultar_precio=SI en la fuente. Se conserva la hoja sin alterar sus datos. Verificación en navegador: nueve productos, nueve botones deshabilitados y ningún aviso de contenido de respaldo tras cargar. Caché y validación por sección comprobadas con seis pruebas automatizadas. WhatsApp sigue en modo de prueba. Captura en outputs/angeles-conexion/catalogo-conectado.jpg.
